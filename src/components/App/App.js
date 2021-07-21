@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import apiCalls from '../../apiCalls';
-// import cafe-img from "../../assets/cafe-img.jpg";
+import AllReservations from '../AllReservations/AllReservations';
+
 
 class App extends Component {
   constructor() {
@@ -33,6 +34,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
+          <AllReservations allReservations={this.state.reservations}/>
           
         </div>
       </div>
