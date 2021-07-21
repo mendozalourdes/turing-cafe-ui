@@ -1,4 +1,5 @@
 import React from 'react';
+import './OneReservation.css'
 
 const OneReservation = ({id, name, date, time, number, cancelReservation}) => {
     return (

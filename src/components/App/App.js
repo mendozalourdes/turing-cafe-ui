@@ -34,7 +34,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          <AllReservations allReservations={this.state.reservations}/>
+          {this.state.reservations.length && <AllReservations allReservations={this.state.reservations}/>}
           
         </div>
       </div>
