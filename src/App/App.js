@@ -1,7 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
+import apiCalls from '../apiCalls';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      error: '', 
+      reservations: []
+    }
+  }
+
+  componentDidMount() {
+    
+  }
+
+
   render() {
     return (
       <div className="App">
