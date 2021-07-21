@@ -2,6 +2,25 @@ describe ('Main Page View', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000');
       });
+
+      it('Should have a 201 status code', () => {
+            cy.intercept(
+              {
+                  method: "GET",
+                  url: "http://localhost:3001/api/v1/reservations"
+              }, 
+              {
+                  status: 201,
+                  body: [{
+                      name: "Lourdes",
+                      date: "07/22",
+                      time: "6:00pm", 
+                      number: 2,
+                      id: 1
+                  }]
+              }
+            
+    ) });
     
     it('Should be able to visit the main page view', () => {
         cy.visit('http://localhost:3000')
