@@ -1,0 +1,19 @@
+.submit-button {
+    background-color: teal;
+    color: white;
+    border: none;
+    width: 10vw;
+    height: 3vh;
+}
+
+.form-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+input {
+    width: 10vw;
+    height: 3vh;
+}
