@@ -26,9 +26,9 @@ class App extends Component {
       .catch(err => err.message)
   }
 
-  // addNewReservation () {
-
-  // }
+  addNewReservation = (newReservation) => {
+    this.setState({reservations: [...this.state.reservations, newReservation]})
+  }
 
 
   render() {
@@ -39,7 +39,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          <Form/>
+          {this.state.reservations.length && <Form addNewReservation={this.addNewReservation}/>}
           {this.state.reservations.length && <AllReservations allReservations={this.state.reservations}/>}
         </div>
       </div>
