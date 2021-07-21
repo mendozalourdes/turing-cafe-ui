@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import apiCalls from '../../apiCalls';
 import AllReservations from '../AllReservations/AllReservations';
+import Form from '../Form/Form';
 
 
 class App extends Component {
@@ -34,8 +35,8 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
+          <Form/>
           {this.state.reservations.length && <AllReservations allReservations={this.state.reservations}/>}
-          
         </div>
       </div>
     )
