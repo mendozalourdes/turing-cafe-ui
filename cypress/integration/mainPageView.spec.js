@@ -9,9 +9,13 @@ describe ('Main Page View', () => {
 
     });
 
-    it('Should have a visible form', () => {
+    it('Should have a form', () => {
         cy.get('input').should('be.visible')
-        .get('button').should('have.length', 10)
+        cy.get('#nameInput')
+        cy.get('#dateInput')
+        cy.get('#timeInput')
+        cy.get('#numberInput')
+        .get('#submitBtn')
     });
 
     it('Should have reservation cards', () => {
@@ -19,6 +23,7 @@ describe ('Main Page View', () => {
         cy.get('p').should('have.class', 'date')
         cy.get('p').should('have.class', 'time')
         cy.get('p').should('have.class', 'number')
+        cy.get('#cancelBtn')
     });
 
     it('Should be able to fill out the form', () => {
@@ -26,6 +31,15 @@ describe ('Main Page View', () => {
         cy.get('#dateInput').type('7/22/2021')
         cy.get('#timeInput').type('6pm')
         cy.get('#numberInput').type('2')
+    });
+
+    it('Should be able to add a new reservation card', () => {
+        cy.get('#nameInput').type('Luly')
+        cy.get('#dateInput').type('7/22/2021')
+        cy.get('#timeInput').type('6pm')
+        cy.get('#numberInput').type('2')
+        cy.get('#submitBtn').click()
+        cy.get('h2').should('have.class', 'client-name').contains('Luly')
     });
 
 
