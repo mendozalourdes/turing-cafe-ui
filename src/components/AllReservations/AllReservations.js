@@ -6,6 +6,7 @@ import OneReservation from '../OneReservation/OneReservation';
 
 
 const AllReservations = ({allReservations}) => {
+    console.log("allRes", allReservations)
     const reservationCards = allReservations.map(reservation => {
         return (
             <OneReservation 
