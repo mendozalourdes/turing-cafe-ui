@@ -12,7 +12,15 @@ class App extends Component {
   }
 
   componentDidMount() {
-    
+    apiCalls.fetchAPIData('/reservations')
+      .then(response => {
+        if(typeof response === 'string') {
+          this.setState({error: response})
+        } else {
+          this.setState({reservations: response})
+        }
+      })
+      .catch(err => err.message)
   }
 
 
