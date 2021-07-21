@@ -1,7 +1,8 @@
 import React from 'react';
 import './AllReservations.css'
+import OneReservation from '../OneReservation/OneReservation';
 
-// import OneReservation
+
 
 
 const AllReservations = ({allReservations}) => {
