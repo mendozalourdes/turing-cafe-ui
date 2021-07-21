@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import apiCalls from '../apiCalls';
+import apiCalls from '../../apiCalls';
 
 class App extends Component {
   constructor() {
