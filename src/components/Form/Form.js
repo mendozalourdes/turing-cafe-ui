@@ -23,11 +23,33 @@ class Form extends Component {
         <div className="form-container">
             <input
                 type="text"
-                className="name"
+                name="name"
                 placeholder="Name"
                 value={this.state.name}
                 onChange={event => this.handleChange(event)}
             /> 
+            <input
+                type="text"
+                name="date"
+                placeholder="Date"
+                value={this.state.date}
+                onChange={event => this.handleChange(event)}
+            /> 
+             <input
+                type="text"
+                name="time"
+                placeholder="Time"
+                value={this.state.time}
+                onChange={event => this.handleChange(event)}
+            /> 
+            <input
+                type="text"
+                name="number"
+                placeholder="Number of Guests"
+                value={this.state.number}
+                onChange={event => this.handleChange(event)}
+            /> 
+        <button>Make Reservation</button>
         </div>
         )
     }
