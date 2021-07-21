@@ -21,6 +21,12 @@ describe ('Main Page View', () => {
         cy.get('p').should('have.class', 'number')
     });
 
+    it('Should be able to fill out the form', () => {
+        cy.get('#nameInput').type('Luly')
+        cy.get('#dateInput').type('7/22/2021')
+        cy.get('#timeInput').type('6pm')
+        cy.get('#numberInput').type('2')
+    });
 
 
 
