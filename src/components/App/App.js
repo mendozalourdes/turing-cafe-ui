@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import apiCalls from '../../apiCalls';
+// import cafe-img from "../../assets/cafe-img.jpg";
 
 class App extends Component {
   constructor() {
