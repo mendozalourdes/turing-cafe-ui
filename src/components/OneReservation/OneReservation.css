@@ -8,3 +8,12 @@
     border-radius: 10px;
 
 }
+
+button {
+    background-color: teal;
+    color: white;
+    border: none;
+    width: 12vw;
+    height: 4vh;
+    
+}
