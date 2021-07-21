@@ -26,6 +26,10 @@ class App extends Component {
       .catch(err => err.message)
   }
 
+  // addNewReservation () {
+
+  // }
+
 
   render() {
     return (
