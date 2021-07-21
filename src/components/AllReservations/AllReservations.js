@@ -18,10 +18,13 @@ const AllReservations = ({allReservations}) => {
         )
     })
 
-    return ()
+    return (
+        <div className="reservations-container">
+            {reservationCards}
+        </div>
+    )
 
 }
-
 
 
 
